@@ -1,0 +1,61 @@
+{
+  "name": "dashboard",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "yarn@4.5.1+sha512.341db9396b6e289fecc30cd7ab3af65060e05ebff4b3b47547b278b9e67b08f485ecd8c79006b405446262142c7a38154445ef7f17c1d5d1de7d90bf9ce7054d",
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.5.1",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^13.0.0",
+    "@testing-library/user-event": "^13.2.1",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.13.0",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "apexcharts": "^4.4.0",
+    "axios": "^1.7.9",
+    "jwt-decode": "^4.0.0",
+    "moment": "^2.30.1",
+    "react": "^19.0.0",
+    "react-apexcharts": "^1.7.0",
+    "react-dom": "^19.0.0",
+    "react-hot-toast": "^2.5.1",
+    "react-icons": "^5.4.0",
+    "react-redux": "^9.2.0",
+    "react-scripts": "5.0.1",
+    "react-spinners": "^0.15.0",
+    "react-window": "^1.8.11",
+    "redux-thunk": "^3.1.0",
+    "semver": "^7.7.0",
+    "socket.io-client": "^4.8.1",
+    "typescript": "^5.7.3",
+    "web-vitals": "^2.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "tailwindcss": "3"
+  }
+}
