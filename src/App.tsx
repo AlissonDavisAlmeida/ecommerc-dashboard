@@ -1,9 +1,12 @@
+import { useState } from "react";
+import { RouteObject } from "react-router-dom";
+import { Router } from "./router/router";
 
 function App() {
+  const [allRoutes, setAllRoutes] = useState<RouteObject[]>([]);
+ 
   return (
-    <div className="App">
-
-    </div>
+   <Router allRoutes={allRoutes}/>
   );
 }
 

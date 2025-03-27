@@ -13,6 +13,7 @@
       "resolveJsonModule": true,
       "isolatedModules": true,
       "jsx": "react-jsx",
+      "rootDir": "src",
       "baseUrl": "src",
       "paths": {
         "@/*": ["*"],
