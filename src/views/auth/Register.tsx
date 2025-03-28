@@ -1,6 +1,24 @@
- const Register = () => {
+const Register = () => {
   return (
-    <div>Register</div>
+    <div
+      className="
+      min-w-screen text-2xl 
+      min-h-screen bg-[#cdcae9] flex justify-center items-center
+      "
+    >
+      <div
+        className="w-[350px] text-[#ffffff] p-2"
+      >
+        <div
+          className="bg-[#6f68d1] p-4 rounded-md"
+        >
+          <h2
+            className="text-xl mb-3 font-bold"
+          >
+            Welcome to Ecommerce</h2>
+        </div>
+      </div>
+    </div>
   )
 }
 
