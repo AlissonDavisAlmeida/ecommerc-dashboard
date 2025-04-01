@@ -3,6 +3,25 @@
   "version": "0.1.0",
   "private": true,
   "packageManager": "yarn@4.5.1+sha512.341db9396b6e289fecc30cd7ab3af65060e05ebff4b3b47547b278b9e67b08f485ecd8c79006b405446262142c7a38154445ef7f17c1d5d1de7d90bf9ce7054d",
+  "scripts": {
+    "start": "react-scripts start",
+    "tailwind:watch": "npx @tailwindcss/cli -i ./src/index.css -o ./src/output.css --watch",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
   "dependencies": {
     "@reduxjs/toolkit": "^2.5.1",
     "@testing-library/jest-dom": "^5.14.1",
@@ -32,34 +51,10 @@
     "typescript": "^5.7.3",
     "web-vitals": "^2.1.0"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "tailwind:watch": "npx @tailwindcss/cli -i ./src/index.css -o ./src/output.css --watch",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
   "devDependencies": {
     "@tailwindcss/cli": "^4.0.17",
     "autoprefixer": "^10.4.21",
+    "globals": "^16.0.0",
     "postcss": "^8.5.3",
     "tailwindcss": "^4.0.17"
   }
