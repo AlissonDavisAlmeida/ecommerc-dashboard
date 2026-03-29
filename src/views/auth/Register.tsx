@@ -1,9 +1,24 @@
 import { Link } from "react-router-dom"
 import { FaFacebook, FaGoogle } from "react-icons/fa";
+import { useState } from "react";
 
 
 const Register = () => {
 
+  const [state, setState] = useState({
+    name: "",
+    email: "",
+    password: "",
+    checkbox: false
+  })
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setState((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  }
 
 
   return (
@@ -38,7 +53,8 @@ const Register = () => {
               px-3 py-2 outline-none border boder-solid border-slate-700 rounded-md bg-transparent text-[#000000]
               
               "
-                type="text" name="Name" placeholder="Name" id="name" required />
+                value={state.name}
+                type="text" name="name" placeholder="Name" id="name" required onChange={handleChange} />
             </div>
             <div className="flex flex-col w-full gap-1 mb-3">
               <label htmlFor="email">Email</label>
@@ -47,7 +63,8 @@ const Register = () => {
               px-3 py-2 outline-none border boder-solid border-slate-700 rounded-md bg-transparent text-[#000000]
               
               "
-                type="text" name="Email" placeholder="Email" id="email" required />
+                value={state.email}
+                type="text" name="email" placeholder="Email" id="email" required onChange={handleChange} />
             </div>
             <div className="flex flex-col w-full gap-1 mb-3">
               <label htmlFor="password">Password</label>
@@ -56,13 +73,14 @@ const Register = () => {
               px-3 py-2 outline-none border boder-solid border-slate-700 rounded-md bg-transparent text-[#000000]
               
               "
-                type="password" name="Password" placeholder="Password" id="password" required />
+                value={state.password}
+                type="password" name="password" placeholder="Password" id="password" required onChange={handleChange} />
             </div>
 
             <div className="flex items-center w-full gap-3 mb-3">
               <input
                 className="w-4 h-4 text-blue-600 overflow-hidden bg-gray-200 rounded border-gray-300 focus:ring-blue-300"
-                type="checkbox" name="checkbox" id="checkbox" />
+                type="checkbox" name="checkbox" id="checkbox" checked={state.checkbox} onChange={(e) => setState({ ...state, checkbox: e.target.checked })} />
               <label className="text-lg" htmlFor="checkbox">I agree to privacy policy & terms</label>
             </div>
             <button

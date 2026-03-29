@@ -1,7 +1,24 @@
+import { useState } from "react"
 import { FaFacebook, FaGoogle } from "react-icons/fa"
 import { Link } from "react-router-dom"
 
 const Login = () => {
+
+  const [formData, setFormData] = useState({
+    email: "",
+    password: ""
+  })
+
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  }
+
+
   return (
     <div
       className="
@@ -34,7 +51,8 @@ const Login = () => {
               px-3 py-2 outline-none border boder-solid border-slate-700 rounded-md bg-transparent text-[#000000]
               
               "
-                type="text" name="Email" placeholder="Email" id="email" required />
+                type="text" name="email" placeholder="Email" id="email" required
+                value={formData.email} onChange={handleChange} />
             </div>
             <div className="flex flex-col w-full gap-1 mb-3">
               <label htmlFor="password">Password</label>
@@ -43,7 +61,8 @@ const Login = () => {
               px-3 py-2 outline-none border boder-solid border-slate-700 rounded-md bg-transparent text-[#000000]
               
               "
-                type="password" name="Password" placeholder="Password" id="password" required />
+                type="password" name="password" placeholder="Password" id="password" required
+                value={formData.password} onChange={handleChange} />
             </div>
             <button
               className="bg-slate-800 w-full hover:shadow-blue-500 hover:shadow-lg text-white rounded-md px-7 py-2 mb-3 cursor-pointer"
